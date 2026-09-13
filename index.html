@@ -251,12 +251,15 @@ body::before {
 .preview-frame {
     position: relative;
     width: 100%;
-    aspect-ratio: 1902 / 910;
+    height: 0;
+    padding-bottom: 47.845%; /* locked to the LST box's ratio (910/1902) so every box matches it exactly */
     overflow: hidden;
     background: #060f0b;
 }
 .preview-frame img {
     display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -499,8 +502,6 @@ body::before {
             <!-- Replace this div with an <iframe> pointing at your published Earth Engine App -->
             <div class="preview-frame raster-lst">
                 <img src="https://github.com/saraswatichatterjee/GEE_Portfolio/blob/main/LST/Rajasthan_LST.png?raw=true" alt="Land Surface Temperature map">
-                
-                </div>
             </div>
         </div>
         <a class="preview-link" href="#" target="_blank" rel="noopener">
@@ -527,8 +528,6 @@ body::before {
             <!-- Replace this div with an <iframe> pointing at your published Earth Engine App -->
             <div class="preview-frame raster-water">
                 <img src="https://github.com/saraswatichatterjee/GEE_Portfolio/blob/main/WaterBody/Waterbody_Monitoring.png?raw=true" alt="Land Use / Land Cover classification result rendered in the Google Earth Engine code editor">
-                
-                </div>
             </div>
         </div>
         <a class="preview-link" href="#" target="_blank" rel="noopener">
